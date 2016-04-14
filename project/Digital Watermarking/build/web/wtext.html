@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+  p{
+    text-align:right;
+    color:blue;
+   }
+  
+  img
+    {
+     border-style:solid;
+     border-color:black;
+     border-width:thick;
+    }
+</style>
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+</head>
+<body background="page_bg.gif">
+<p><a href="change.jsp"><b>Change Password</b></a><br>
+<a href="index_1.jsp"><b>Signout</b></a></p>
+
+<form style="position:absolute;top=80;left:300;" action="email.jsp">
+<center><b>Enter Watermark TEXT:</b><input type="text" name="n15"/></center><br><br>
+<center><b>Enter Image URL:</b><input type="file" onchange="previewFile()"><br><br>
+    <img src="" height="400px" alt="Image preview will show here....">
+<center><input type="submit" value="SUBMIT"/></center>
+</form>
+
+
+
+</body>
+</html>

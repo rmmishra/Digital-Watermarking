@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+p {
+	position: top right;
+	top: 200;
+	text-align: right;
+	color: blue;
+}
+
+h6 {
+	font-family: Monotype Corsiva;
+	font-size: 55;
+	text-align: center;
+	background-position: top center;
+}
+
+h4 {
+	position: top right;
+	top: 200;
+	text-align: right;
+	color: blue;
+}
+</style>
+</head>
+<body background="page_bg.gif">
+	<center>
+		<b><h6 onmouseover="style.color='black'"
+				onmouseout="style.color='red'">WATER MARKING</h6></b>
+	</center>
+	<p>
+		<a href="ChangePass.jsp"><b>Change Password</b></a><br> <a
+			href="index_1.jsp"><b>Signout</b></a>
+	</p>
+
+	<center style="position: absolute; top: 300; left: 400;">
+		<form name="f1" action="wtext.html">
+			<input type="submit" value="Watermarking with Text" />
+		</form>
+		<form name="f2" action="wimg.html" enctype="multipart/form-data">
+			<input type="submit" value="Watermarking with Image" />
+		</form>
+		<form name="f3" action="viewimg.jsp">
+			<input type="submit" value="Show All Images" />
+		</form>
+	</center>
+	<br/>
+	
+</body>
+</html>
